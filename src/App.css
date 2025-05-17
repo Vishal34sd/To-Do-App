@@ -1,0 +1,20 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header{
+  background-color:rgb(20, 54, 115);
+  height:40px;
+  width:100%;
+  text-align:center;
+  color:rgb(254, 254, 254);
+
+}
+.task-list{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  margin-top:20px;
+}
