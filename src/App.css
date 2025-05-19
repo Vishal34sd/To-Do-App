@@ -17,4 +17,20 @@
   justify-content:center;
   align-items:center;
   margin-top:20px;
+  width: 100%;
+}
+.container{
+  width:100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically */
+}
+
+.task {
+  width: 100%;
+  display: flex;
+  justify-content: center;   /* centers the task content */
+  align-items: center;
+  margin-bottom: 10px;
 }
