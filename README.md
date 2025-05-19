@@ -1,16 +1,19 @@
-<<<<<<< HEAD
-# To-Do-App
-=======
-# React + Vite
+React Hooks Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal, accessible, and fully‑typed Todo application built with React 18 Hooks, Vite, and Tailwind CSS. Add, toggle, filter, and persist tasks – all in fewer than 200 lines of component code.
 
-Currently, two official plugins are available:
+✨ Key Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hook‑centric architecture – built entirely with React hooks (useState, useReducer, useEffect).
 
-## Expanding the ESLint configuration
+LocalStorage persistence – tasks stay after a refresh or browser restart.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> 97a2fd0 (first commit)
+Keyboard & screen‑reader friendly – logical tab order, ARIA labels, focus outlines.
+
+Dark / Light theme – adapts automatically to prefers‑color‑scheme.
+
+TypeScript strict mode – type‑safe from component props to reducer actions.
+
+Zero backend – deploy as static files to Vercel, Netlify, GitHub Pages, Cloudflare Pages, etc.
+
+<200 lines of UI code – easy to read, extend, and learn from.
