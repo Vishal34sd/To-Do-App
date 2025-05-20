@@ -3,18 +3,18 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Header from './components/Header'
+import Fields from './components/Fields'
 
 function App() {
 
   const [input , setinput]= useState("");
   const [data, setdata] = useState([]);
-  const addItem = ()=>{
-    if(input.trim === ""){
-      return ;
-    setdata(...data, {input});
+  const addItem = () => {
+    if (input.trim() === "") {
+      return;
     }
-    setdata(...data, {input});
-    setinput(...data)
+    setdata([...data, { input }]);
+    setinput("");
   };
   const removeItem = (index)=>{
     const arr = data ;
@@ -25,21 +25,27 @@ function App() {
      <div className= "App">
         <Header/>
         <div className ="container">
-          <input value={input} type = "text" placeholder="Add a new task"/>
+          <input
+            value={input}
+            onChange={(e) => setinput(e.target.value)}
+            type="text"
+            placeholder="Add a new task"
+          />
           <button  onClick= {addItem}className="add-button">Add</button>
         </div>
-        <div className="task-list">
-          <div className="task">
-            <input type="checkbox"/>
-            <h3>Javascript</h3>
-            < button className="delete-button">Delete</button>
-          </div>
-        </div>
-        
-  </div>
-  
-  )}
- 
+        {data.map((element, index) => {
+          return (
+            <Fields
+              index={index}
+              input={element.input}
+              key={index}
+              remove ={removeItem}
+            />
+          );
+        })}
+      </div>
+    );
+  }
 
 
 export default App
