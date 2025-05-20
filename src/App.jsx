@@ -5,17 +5,33 @@ import './App.css'
 import Header from './components/Header'
 
 function App() {
+
+  const [input , setinput]= useState("");
+  const [data, setdata] = useState([]);
+  const addItem = ()=>{
+    if(input.trim === ""){
+      return ;
+    setdata(...data, {input});
+    }
+    setdata(...data, {input});
+    setinput(...data)
+  };
+  const removeItem = (index)=>{
+    const arr = data ;
+    data.splice(index,1);
+    setdata([...arr]);
+  }
      return (
      <div className= "App">
         <Header/>
         <div className ="container">
-          <input type = "text" placeholder="Add a new task"/>
-          <button className="add-button">Add</button>
+          <input value={input} type = "text" placeholder="Add a new task"/>
+          <button  onClick= {addItem}className="add-button">Add</button>
         </div>
         <div className="task-list">
           <div className="task">
             <input type="checkbox"/>
-            <span className="task-text">task 1</span>
+            <h3>Javascript</h3>
             < button className="delete-button">Delete</button>
           </div>
         </div>
